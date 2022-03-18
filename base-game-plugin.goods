@@ -1,7 +1,7 @@
 {
     "name": "Plugin Name",
     "git": {
-        "url": "https://github.com/ChatTheatre/name-plugin",
+        "url": "https://github.com/ChatTheatre/base-game-plugin",
         "branch": "main"
     },
     "paths": {
