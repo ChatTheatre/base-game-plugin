@@ -134,9 +134,9 @@ ufw allow ssh
 ufw allow 11000:11803/tcp  # for now, allow all DGD incoming ports and tunnel ports
 
 ufw allow 11098/tcp # DGD telnet port
-ufw allow 11810/tcp # Gables game WSS websocket
-ufw allow 11812/tcp # Gables WOE WSS websocket
-ufw allow 10803/tcp # Gables https-ified DGD web port
+ufw allow 11810/tcp # ChatTheatre game WSS websocket
+ufw allow 11812/tcp # ChatTheatre WOE WSS websocket
+ufw allow 10803/tcp # ChatTheatre https-ified DGD web port
 
 # Allow these ports in case of local Jitsi install
 ufw allow 10000/udp # For Jitsi Meet server
@@ -288,13 +288,13 @@ cat >/var/skotos/skoot/usr/System/data/instance <<EndOfMessage
 portbase 11000
 hostname $FQDN_CLIENT
 login_hostname $FQDN_LOGIN
-bootmods DevSys Theatre Jonkichi Tool Generic SMTP UserDB Gables
+bootmods DevSys Theatre Jonkichi Tool Generic SMTP UserDB ChatTheatre
 textport 443
 real_textport 11443
 webport 11803
 real_webport 11080
 url_protocol https
-access gables
+access chattheatre
 memory_high 128
 memory_max 256
 statedump_offset 600
@@ -327,7 +327,7 @@ map \$http_upgrade \$connection_upgrade {
         }
 
 # Websocket connection via relay to DGD's TextIF port (11443)
-upstream gables-ws {
+upstream chattheatre-ws {
     server 127.0.0.1:11801;
 }
 
@@ -345,8 +345,8 @@ server {
     listen *:11810;
     server_name $FQDN_CLIENT;
 
-    location /gables {
-      proxy_pass http://gables-ws;
+    location /chattheatre {
+      proxy_pass http://chattheatre-ws;
       proxy_pass_request_headers on;
       proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
       proxy_set_header X-Real-IP \$remote_addr;
@@ -426,14 +426,14 @@ cat >/usr/local/websocket-to-tcp-tunnel/config.json <<EndOfMessage
     "shutdownDelay": 60,
     "servers": [
         {
-            "name": "gables",
+            "name": "chattheatre",
             "listen": 11801,
             "send": 11443,
             "host": "$FQDN_CLIENT",
             "sendTunnelInfo": false
         },
         {
-            "name": "gables-tree-of-woe",
+            "name": "chattheatre-tree-of-woe",
             "listen": 11802,
             "send": 11090,
             "host": "$FQDN_CLIENT",
@@ -463,11 +463,11 @@ crontab -u skotos ~skotos/crontab.txt
 # 8. Patch built-in Orchil
 ####
 
-cat >/var/skotos/skoot/usr/Gables/data/www/profiles.js <<EndOfMessage
+cat >/var/skotos/skoot/usr/ChatTheatre/data/www/profiles.js <<EndOfMessage
 "use strict";
 // orchil/profiles.js
 var profiles = {
-        "portal_gables":{
+        "portal_chattheatre":{
                 "method":   "websocket",
                 "protocol": "wss",
                 "web_protocol": "https",
@@ -475,7 +475,7 @@ var profiles = {
                 "port":      11810,
                 "woe_port":  11812,
                 "http_port": 11803,
-                "path":     "/gables",
+                "path":     "/chattheatre",
                 "extra":    "",
                 "reports":   false,
                 "chars":    true,
@@ -527,7 +527,7 @@ export BASH_ESCAPED_PASS=`printf "%q" $PHP_HASHED_PASS`
 mysql --user=root userdb <<EndOfMessage
 INSERT INTO users (name, email, creation_time, password, pay_day, next_month, next_year, next_stamp, account_type, user_updated)
   VALUES ('skott', 'fake-email@fake-domain.com', 1610538280, '$BASH_ESCAPED_PASS', 13, 12, 2021, 1613130280, 'developer', 3);
-INSERT INTO access (ID, game) SELECT ID, 'gables' FROM users WHERE users.name = 'skott';
+INSERT INTO access (ID, game) SELECT ID, 'chattheatre' FROM users WHERE users.name = 'skott';
 INSERT INTO flags (ID, flag) SELECT ID, 'terms-of-service' FROM users WHERE users.name = 'skott';
 
 INSERT INTO users (name, email, creation_time, password, pay_day, next_month, next_year, next_stamp, account_type, user_updated)
@@ -582,12 +582,12 @@ EndOfMessage
 cat >/var/www/html/user/config/general.json <<EndOfMessage
 {
 
-    "gameID": "gables",
-    "siteLogo": "gables-small.jpg",
-    "siteName": "The Gables",
+    "gameID": "chattheatre",
+    "siteLogo": "chattheatre-small.jpg",
+    "siteName": "ChatTheatre",
     "userdbURL": "$FQDN_LOGIN",
     "webURL": "https://$FQDN_LOGIN",
-    "woeURL": "https://$FQDN_CLIENT:11803/gables/TreeOfWoe.html",
+    "woeURL": "https://$FQDN_CLIENT:11803/chattheatre/TreeOfWoe.html",
     "gameURL": "https://$FQDN_CLIENT",
     "supportEmail": "$EMAIL"
 }
@@ -666,7 +666,7 @@ server {
     index index.html index.htm;
 
     location /assets {
-      root /var/skotos/skoot/usr/Gables/data/www/assets;
+      root /var/skotos/skoot/usr/ChatTheatre/data/www/assets;
     }
 
     location / {

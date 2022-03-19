@@ -5,6 +5,7 @@
         "branch": "main"
     },
     "paths": {
-        "skoot/data/vault": "data/vault"
+        "skoot/data/": "data/",
+	"skoot/usr/": "usr/"
     }
 }
