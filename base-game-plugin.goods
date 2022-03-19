@@ -5,7 +5,11 @@
         "branch": "main"
     },
     "paths": {
-        "skoot/data": "data",
-        "skoot/usr": "usr"
+        "skoot/data/modules/ChatTheatre": "data/modules/ChatTheatre",
+        "skoot/data/vault/TextIF": "data/vault/TextIF",
+        "skoot/data/vault/Theatre/Lib": "data/vault/Theatre/Lib",
+        "skoot/data/vault/Theatre/Theatres": "data/vault/Theatre/Theatres",
+        "skoot/data/vault/Theatre/Web": "data/vault/Theatre/Web",
+        "skoot/data/vault": "data/vault"
     }
 }
