@@ -27,7 +27,7 @@ HTTP_loaded()
 string
 remap_http_request(string root, string url, mapping args)
 {
-   if (root == "chattheatre") {
+   if (root == "ChatTheatre") {
       return "/usr/ChatTheatre/data/www" + url;
    }
    error("Unknown URL root " + root);
