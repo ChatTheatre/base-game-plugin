@@ -1,7 +1,7 @@
 {
     "name": "Base SkotOS Game",
     "git": {
-        "url": "https://github.com/ChatTheatre/base-game-plugin",
+        "url": "https://github.com/saraht45/base-game-plugin",
         "branch": "main"
     },
     "paths": {
