@@ -5,6 +5,8 @@
         "branch": "main"
     },
     "paths": {
+        "skoot/data": "data",
+        "skoot/data/modules": "data/modules",
         "skoot/data/modules/ChatTheatre": "data/modules/ChatTheatre",
         "skoot/data/vault/TextIF": "data/vault/TextIF",
         "skoot/data/vault/Theatre/Lib": "data/vault/Theatre/Lib",
