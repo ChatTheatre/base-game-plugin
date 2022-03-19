@@ -5,19 +5,8 @@
         "branch": "main"
     },
     "paths": {
+        "skoot": "",
         "skoot/data": "data",
-        "skoot/data/modules": "data/modules",
-        "skoot/data/modules/ChatTheatre": "data/modules/ChatTheatre",
-        "skoot/data/vault/TextIF": "data/vault/TextIF",
-        "skoot/data/vault/Theatre/Lib": "data/vault/Theatre/Lib",
-        "skoot/data/vault/Theatre/Theatres": "data/vault/Theatre/Theatres",
-        "skoot/data/vault/Theatre/Web": "data/vault/Theatre/Web",
-        "skoot/data/vault": "data/vault",
-        "skoot/usr/ChatTheatre": "usr/ChatTheatre",
-        "skoot/usr/ChatTheatre/data": "usr/ChatTheatre/data",
-        "skoot/usr/ChatTheatre/data/www": "usr/ChatTheatre/data/www",
-        "skoot/usr/ChatTheatre/data/www/assets": "usr/ChatTheatre/data/www/assets",
-        "skoot/usr/ChatTheatre/data/www/assets/arrows": "usr/ChatTheatre/data/www/assets/arrows", 
-        "skoot/usr/System/data": "usr/System/data"
+	"skoot/usr": "usr"
     }
 }
