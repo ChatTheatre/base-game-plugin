@@ -41,7 +41,7 @@ if [ -z "$PID1" ]
 then
     echo "Running Relay.js for port ${PORTBASE}801->${PORTBASE}443"
     pushd websocket-to-tcp-tunnel
-    nohup node src/Relay.js --listen=${PORTBASE}801 --send=${PORTBASE}443 --host=localhost --name=gables --wsHeartbeat=30 --shutdownDelay=3 --tunnelInfo=false &
+    nohup node src/Relay.js --listen=${PORTBASE}801 --send=${PORTBASE}443 --host=localhost --name=chattheatre --wsHeartbeat=30 --shutdownDelay=3 --tunnelInfo=false &
     popd
 else
     echo "Relay is already running for port ${PORTBASE}801->${PORTBASE}443"
@@ -51,7 +51,7 @@ if [ -z "$PID2" ]
 then
     echo "Running Relay.js for port ${PORTBASE}802->${PORTBASE}090"
     pushd websocket-to-tcp-tunnel
-    nohup node src/Relay.js --listen=${PORTBASE}802 --send=${PORTBASE}090 --host=localhost --name=gables --wsHeartbeat=30 --shutdownDelay=3 --tunnelInfo=false &
+    nohup node src/Relay.js --listen=${PORTBASE}802 --send=${PORTBASE}090 --host=localhost --name=chattheatre --wsHeartbeat=30 --shutdownDelay=3 --tunnelInfo=false &
     popd
 else
     echo "Relay is already running for port ${PORTBASE}802->${PORTBASE}090"

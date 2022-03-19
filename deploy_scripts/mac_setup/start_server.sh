@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This is an example start script, similar to the ones other SkotOS games
-# should supply. See https://github.com/ChatTheatre/gables_game for an
+# should supply. See https://github.com/ChatTheatre/base_game for an
 # up-to-date example.
 
 # A heavily-customised game may need to stop using the standard startup and

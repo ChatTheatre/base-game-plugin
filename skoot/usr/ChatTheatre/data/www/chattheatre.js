@@ -351,13 +351,13 @@
             i = filename.indexOf(' ');
 		}
 
-		artwin = window.open('http://game.gables.chattheatre.com/Theatre/Art.sam?url=' +
+		/* artwin = window.open('http://game.gables.chattheatre.com/Theatre/Art.sam?url=' +
                                  escape(filename) + '&title=' +
 				 escape(windowtitle), windowname,
 				 'width=100,height=100,left=' + scrLeft +
                                  ',top=' + scrTop +
 				 ',hotkeys=no,scrollbars=no,resizable=no,' +
-				 'dependent=yes');
+				 'dependent=yes'); */
 		// Just in case it was already open and not at the foreground.
 		artwin.focus();
     }
