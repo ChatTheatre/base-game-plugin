@@ -14,7 +14,7 @@ void
 boot(int block)
 {
    if (ur_name(previous_object()) == MODULED) {
-      INFO("Booting Chat Theatre...");
+      INFO("Booting ChatTheatre...");
    }
 }
 
