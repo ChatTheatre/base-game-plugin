@@ -15,6 +15,7 @@
         "skoot/usr/ChatTheatre/data": "usr/ChatTheatre/data",
         "skoot/usr/ChatTheatre/data/www": "usr/ChatTheatre/data/www",
         "skoot/usr/ChatTheatre/data/www/assets": "usr/ChatTheatre/data/www/assets",
+        "skoot/usr/ChatTheatre/data/www/assets/arrows": "usr/ChatTheatre/data/www/assets/arrows", 
         "skoot/usr/System/data": "usr/System/data"
     }
 }
