@@ -1,12 +1,10 @@
 {
-    "name": "Plugin Name",
+    "name": "Base SkotOS Game",
     "git": {
         "url": "https://github.com/ChatTheatre/base-game-plugin",
         "branch": "main"
     },
     "paths": {
-        "skoot": "",
-        "skoot/data": "data",
-	"skoot/usr": "usr"
+        "skoot": ""
     }
 }
