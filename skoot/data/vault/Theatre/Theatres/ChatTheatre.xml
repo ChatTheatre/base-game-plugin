@@ -1,5 +1,5 @@
 <object clone="/usr/Theatre/obj/theatre" owner="SID">
-  <Theatre:Theatre id="ChatTheatre" name="ChatTheatre" brief="Chat Theatre" description="Chat Theatre" ranking="5" announcement="<b>Type:</b> Chat Theatre<br/><b>Overview:</b> A basic chat theatre" room="" jail="" home="" office="" hostname="INSTANCE_HOSTNAME" realmurl="http://www.skotos.net/MansionGame/client/" bigmapurl="http://www.skotos.net/MansionGame/images/map.jpg" restricted="false">
+  <Theatre:Theatre id="ChatTheatre" name="ChatTheatre" brief="Chat Theatre" description="Chat Theatre" ranking="5" announcement="<b>Type:</b> Chat Theatre<br/><b>Overview:</b> A basic chat theatre" room="OBJ('ChatTheatre:Rooms:StartingShip:02:PrivateRooms:CabinN01')" jail="OBJ('ChatTheatre:Rooms:StartingShip:01:01-Backstage')" home="OBJ('ChatTheatre:Rooms:StartingShip:02:PrivateRooms:CabinN01')" office="" hostname="INSTANCE_HOSTNAME" realmurl="http://www.skotos.net/MansionGame/client/" bigmapurl="http://www.skotos.net/MansionGame/images/map.jpg" restricted="false">
     <Theatre:Guests/>
     <Theatre:MaleBodies>
       <Theatre:MaleBody body="OBJ(Bodies:UrMainbody)"/>

@@ -32,7 +32,7 @@
                \<font size="-2"\>\<br/\>\</font\>
                \{? \| \$(Theatre.Chatter) \|
                    \<a href="Edit"\>Edit My Character\</a\> \\\|
-\{? \| \$(UDat.Host) \| \<a href="/chattheatre/chattheatre.htm?charName=\$(Theatre.ChatName)"\>Play\</a\> \\\| \<zealotry src="woe:jon"\>\<a target="_top" href="/chattheatre/TreeOfWoe.html"\>Tree of Woe\</a\>\</zealotry\> \|\<a href="/chattheatre/chattheatre.htm?charName=\$(Theatre.ChatName)"\>Play\</a\>\}
+\{? \| \$(UDat.Host) \| \<a href="/chattheatre/client.htm?charName=\$(Theatre.ChatName)"\>Play\</a\> \\\| \<zealotry src="woe:jon"\>\<a target="_top" href="/chattheatre/TreeOfWoe.html"\>Tree of Woe\</a\>\</zealotry\> \|\<a href="/chattheatre/client.htm?charName=\$(Theatre.ChatName)"\>Play\</a\>\}
                   \|
                   \<zform\>
                      \<action\>
