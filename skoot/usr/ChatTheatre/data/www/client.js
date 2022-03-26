@@ -41,6 +41,7 @@
 			var img = document.getElementById("image_map_img");
 			if (img) {
 				img.style.backgroundImage = "url('"+msg+"')";
+                img.style.backgroundSize = "130px 130px";
 			} else {
 				badSkoot(num, msg);
 			}
