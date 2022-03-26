@@ -34,6 +34,7 @@
     background-position:center center; 
     margin: auto; 
     background-repeat:no-repeat; 
+    background-size: 130px;
     
     /* CHANGE THE URL TO YOUR OWN CUSTOM MAP LOADING IMAGE */
     /*background-image:url('http://images.gables.chattheatre.com/map-loading.gif');*/
