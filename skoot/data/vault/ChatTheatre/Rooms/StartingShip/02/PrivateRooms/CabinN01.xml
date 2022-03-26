@@ -67,9 +67,6 @@
       <Core:Property property="revisions">
          (\{ 1647808795, "bobo", "E" \})
       </Core:Property>
-      <Core:Property property="virtualcurrent">
-         \<[ChatTheatre:Rooms:StartingShip:02:PrivateRooms:CabinN01]#5446\>
-      </Core:Property>
     </Core:Properties>
     <Notes:Notes/>
   </Base:Thing>
